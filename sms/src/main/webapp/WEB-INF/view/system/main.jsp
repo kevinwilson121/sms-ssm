@@ -64,22 +64,22 @@
                 <%-- 通过JSTL设置用户查看权限:  仅管理员可以查看年级,班级,管理员列表信息 --%>
                 <c:if test="${userType == 1}">
                 {
-                    "menuid": "3", "icon": "", "menuname": "班级信息管理",
+                    "menuid": "3", "icon": "", "menuname": "球队信息管理",
                     "menus": [
                         {
                             "menuid": "23",
-                            "menuname": "班级列表",
+                            "menuname": "球队列表",
                             "icon": "icon-class",
                             "url": "../clazz/goClazzListView"
                         }
                     ]
                 },
                 {
-                    "menuid": "4", "icon": "", "menuname": "年级信息管理",
+                    "menuid": "4", "icon": "", "menuname": "联赛信息管理",
                     "menus": [
                         {
                             "menuid": "24",
-                            "menuname": "年级列表",
+                            "menuname": "联赛列表",
                             "icon": "icon-grade",
                             "url": "../grade/goGradeListView"
                         }
