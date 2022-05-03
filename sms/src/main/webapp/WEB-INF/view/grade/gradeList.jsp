@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta charset="UTF-8" content="#">
-    <title>年级信息管理页面</title>
+    <title>联赛信息管理页面</title>
     <!-- 引入CSS -->
     <link rel="stylesheet" type="text/css"
           href="${pageContext.request.contextPath}/static/easyui/themes/default/easyui.css">
@@ -41,11 +41,11 @@
                 columns: [[
                     {field: 'chk', checkbox: true, width: 50},
                     {field: 'id', title: 'ID', width: 100, sortable: true},
-                    {field: 'name', title: '年级名称', width: 150},
-                    {field: 'manager', title: '年级主任', width: 150},
-                    {field: 'email', title: '主任邮箱', width: 150},
-                    {field: 'telephone', title: '主任电话', width: 150},
-                    {field: 'introducation', title: '年级介绍', width: 300}
+                    {field: 'name', title: '联赛名称', width: 150},
+                    {field: 'manager', title: '主办方', width: 150},
+                    {field: 'email', title: '联赛邮箱', width: 150},
+                    {field: 'telephone', title: '联赛电话', width: 150},
+                    {field: 'introducation', title: '联赛介绍', width: 300}
                 ]],
                 toolbar: "#toolbar"//工具栏
             });
@@ -113,7 +113,7 @@
 
             //设置添加年级信息窗口
             $("#addDialog").dialog({
-                title: "添加年级信息窗口",
+                title: "添加联赛信息窗口",
                 width: 430,
                 height: 380,
                 iconCls: "icon-house",
@@ -169,7 +169,7 @@
 
             //设置编辑年级信息窗口
             $("#editDialog").dialog({
-                title: "修改年级信息窗口",
+                title: "修改联赛信息窗口",
                 width: 430,
                 height: 380,
                 iconCls: "icon-house",
@@ -279,35 +279,35 @@
     <form id="addForm" method="post" action="#">
         <table id="addTable" style="border-collapse:separate; border-spacing:0px 3px;" cellpadding="6">
             <tr>
-                <td>年级名称</td>
+                <td>联赛名称</td>
                 <td colspan="1">
                     <input id="add_name" style="width: 200px; height: 30px;" class="easyui-textbox"
-                           type="text" name="name" data-options="required:true, missingMessage:'请填写年级名称哟~'"/>
+                           type="text" name="name" data-options="required:true, missingMessage:'请填写联赛名称哟~'"/>
                 </td>
             </tr>
             <tr>
-                <td>年级主任</td>
+                <td>主办方</td>
                 <td colspan="1"><input id="add_manager" style="width: 200px; height: 30px;" class="easyui-textbox"
                                        type="text" name="manager"
-                                       data-options="required:true, missingMessage:'请填写主任姓名哟~'"/>
+                                       data-options="required:true, missingMessage:'请填写主办方名字哟~'"/>
                 </td>
             </tr>
             <tr>
-                <td>主任邮箱</td>
+                <td>联赛邮箱</td>
                 <td colspan="1"><input id="add_email" style="width: 200px; height: 30px;" class="easyui-textbox"
                                        type="text" name="email" validType="email"
                                        data-options="required:true, missingMessage:'请填写邮箱地址哟~'"/>
                 </td>
             </tr>
             <tr>
-                <td>主任电话</td>
+                <td>联赛电话</td>
                 <td colspan="4"><input id="add_telephone" style="width: 200px; height: 30px;" class="easyui-textbox"
                                        type="text" name="telephone" validType="mobile"
                                        data-options="required:true, missingMessage:'请填写联系方式哟~'"/>
                 </td>
             </tr>
             <tr>
-                <td>年级介绍</td>
+                <td>联赛介绍</td>
                 <td colspan="4"><input id="add_introduation" style="width: 200px; height: 60px;" class="easyui-textbox"
                                        type="text" name="introducation"
                                        data-options="multiline:true,required:true, missingMessage:'班级介绍不能为空呦~'"/>
@@ -325,34 +325,34 @@
         <input type="hidden" id="edit_id" name="id"/>
         <table id="editTable" style="border-collapse:separate; border-spacing:0 3px;" cellpadding="6">
             <tr>
-                <td>年级名称</td>
+                <td>联赛名称</td>
                 <td><input id="edit_name" style="width: 200px; height: 30px;" class="easyui-textbox" type="text"
                            name="name" data-options="required:true, missingMessage:'请填写年级姓名哟~'"/>
                 </td>
             </tr>
             <tr>
-                <td>年级主任</td>
+                <td>主办方</td>
                 <td colspan="4"><input id="edit_manager" style="width: 200px; height: 30px;" class="easyui-textbox"
                                        type="text" name="manager"
                                        data-options="required:true, missingMessage:'请填写年级主任姓名哟~'"/>
                 </td>
             </tr>
             <tr>
-                <td>主任邮箱</td>
+                <td>联赛邮箱</td>
                 <td colspan="4"><input id="edit_email" style="width: 200px; height: 30px;" class="easyui-textbox"
                                        type="text" name="email" validType="email"
                                        data-options="required:true, missingMessage:'请填写邮箱地址哟~'"/>
                 </td>
             </tr>
             <tr>
-                <td>主任电话</td>
+                <td>联赛电话</td>
                 <td><input id="edit_telephone" style="width: 200px; height: 30px;" class="easyui-textbox" type="text"
                            name="telephone" validType="mobile"
                            data-options="required:true, missingMessage:'请填写联系方式哟~'"/>
                 </td>
             </tr>
             <tr>
-                <td>年级介绍</td>
+                <td>联赛介绍</td>
                 <td colspan="4"><input id="edit_introducation" style="width: 200px; height: 60px;"
                                        class="easyui-textbox"
                                        type="text" name="introducation"
